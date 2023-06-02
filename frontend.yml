@@ -1,10 +1,11 @@
 - name: setup frontend
   hosts: all
+  become: yes
   tasks:
      - nmae: installing nginx server
        ansible.builtin.debug:
-       name: nginx
-       state: latest
+         name: nginx
+         state: latest
 
 
 
