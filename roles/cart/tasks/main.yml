@@ -1,0 +1,4 @@
+- nmae: import role
+  ansible.builtin.import.role:
+    name: common
+    task_from: nodejs
