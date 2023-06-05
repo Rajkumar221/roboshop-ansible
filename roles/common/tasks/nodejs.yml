@@ -25,23 +25,3 @@
 
 
 
-
-
-
-  
-
-
-
-
-
-echo -e "${color} Setup SystemD $component Service ${nocolor}"
-cp /home/centos/Roboshop-Project/$component.service /etc/systemd/system/$component.service &>>$log_file
-stat_check $?
-
-echo -e "${color} start $component service ${nocolor}"
-systemctl daemon-reload &>>$log_file
-systemctl enable $component  &>>$log_file
-systemctl restart $component &>>$log_file
-stat_check $?
-
-}
