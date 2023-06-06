@@ -1,0 +1,49 @@
+- name: Install python
+  ansible.builtin.yum:
+    name:
+       - python36
+       -gcc
+       -python3-devel
+    state: installed
+
+- name: application prerequities setup
+  ansible.builtin.import.task:
+    file: app_presetup.yml
+
+- name: install application dependencies
+  ansible.builtin.shell: pip3.6 install -r requirements.txt
+
+- name: systemd setup
+  ansible.builtin.import.task:
+    file: systemd_setup.yml
+
+- name: start payment service
+  ansible.builtin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo -e "${color} Start Payment Serrvice ${nocolor}"
+systemctl daemon-reload &>>$log_file
+systemctl enable $component  &>>$log_file
+systemctl restart $component &>>$log_file
+stat_check $?
+}
