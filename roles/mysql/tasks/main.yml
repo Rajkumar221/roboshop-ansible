@@ -1,4 +1,4 @@
-- nmae: Disable MySQL Default Version
+- name: Disable MySQL Default Version
   ansible.builtin.shell: yum module disable mysql -y
 
 - name: Copy MySQL repo file
