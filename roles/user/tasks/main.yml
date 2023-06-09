@@ -1,4 +1,4 @@
 - name: load role
-  ansible.builtin.import.role:
+  ansible.builtin.import_role:
    name: common
    task_from: nodejs
