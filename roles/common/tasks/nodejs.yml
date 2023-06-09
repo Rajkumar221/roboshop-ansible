@@ -10,10 +10,10 @@
   ansible.builtin.import.tasks:
     file: app_presetup.yml
 
-- name: Load nodejs dependencies
+- name: Load NodeJS Dependencies
   ansible.builtin.shell: npm install
-    args:
-    chdir: /app        
+  args:
+    chdir: /app       
 
 - name: load schema
   ansible.builtin.import.task:
