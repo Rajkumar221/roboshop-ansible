@@ -1,9 +1,9 @@
 - name: Install python
   ansible.builtin.yum:
     name:
-       -python36
-       -gcc
-       -python3-devel
+       - python36
+       - gcc
+       - python3-devel
     state: installed
 
 - name: application prerequities setup
@@ -16,10 +16,4 @@
 - name: systemd setup
   ansible.builtin.import_task:
     file: systemd_setup.yml
-
-- name: start payment service
-  ansible.builtin.systemd:
-    state: restarted
-    name: payment
-    enabled: yes
 
