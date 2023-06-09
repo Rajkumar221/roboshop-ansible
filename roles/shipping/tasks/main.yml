@@ -1,9 +1,4 @@
-- name: load role
-  ansible.builtin.import_role:
-   name: common
-   task_from: nodejs
-
-- name: Load Schema Setup
+- name: Load Maven
   ansible.builtin.import_role:
     name: common
-    tasks_from: mongo_schema_setup.yml
+    tasks_from: maven
