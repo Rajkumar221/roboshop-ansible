@@ -16,13 +16,13 @@
   ansible.builtin.replace:
      path: /etc/redis.conf
      regexp: '127.0.0.1'
-     replace: '0.0.0.0': 
+     replace: '0.0.0.0'
 
 - name: Update listen address
   ansible.builtin.replace:
      path: /etc/redis/redis.conf
      regexp: '127.0.0.1'
-     replace: '0.0.0.0': 
+     replace: '0.0.0.0'
 
 - name: start redis service
   ansible.builtin.systemd:
