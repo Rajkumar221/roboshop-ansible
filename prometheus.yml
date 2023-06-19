@@ -1,0 +1,6 @@
+- nmae: setup roboshop prometheus server
+  hosts: localhost
+  become: yes
+  connection: local
+  roles:
+    - prometheus
