@@ -1,5 +1,5 @@
 - name: Setup RoboShop Project
-  hosts: all
+  hosts: local
   become: yes
   roles:
     - "{{ role_name }}"
